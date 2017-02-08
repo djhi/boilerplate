@@ -16,7 +16,7 @@ endif
 install-npm-dependencies:
 	echo "Installing Node dependencies for environment $(NODE_ENV)"
 	yarn $(if $(filter production staging,$(NODE_ENV)),--production,)
-ifeq ($(NODE_ENV), development)
+ifeq ($(NODE_ENV), $(filter $(NODE_ENV),development test))
 	make install-selenium
 endif
 
