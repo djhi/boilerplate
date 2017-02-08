@@ -30,6 +30,7 @@ before_script:
     - cp ./config/test-dist.js ./config/test.js
 
 before_install:
+    - npm install -g yarn --cache-min 999999999
     - sh -e /etc/init.d/xvfb start
     - sleep 3
 

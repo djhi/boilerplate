@@ -24,7 +24,7 @@ install-selenium:
 	echo "Installing Selenium server"
 	./node_modules/.bin/selenium-standalone install --version=2.50.1 --drivers.chrome.version=2.24
 
-install: copy-conf install-npm-dependencies install-selenium ## Install npm dependencies for the api, admin, and frontend apps
+install: copy-conf install-npm-dependencies ## Install npm dependencies for the api, admin, and frontend apps
 
 build:
 	./node_modules/.bin/next build src
