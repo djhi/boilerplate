@@ -1,5 +1,11 @@
 # My boilerplate [![Build Status](https://travis-ci.org/djhi/boilerplate.svg?branch=master)](https://travis-ci.org/djhi/boilerplate)
 
+This is my boilerplate based on:
+
+- backpack
+- next
+- mongo
+
 ## Setup
 ```sh
 make install
