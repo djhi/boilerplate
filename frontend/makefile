@@ -39,7 +39,7 @@ test-unit: ## Run the frontend application unit tests
 		"./src/**/*.spec.js"
 
 test-e2e: ## Run the frontend application e2e tests
-	# NODE_ENV=test ${MAKE} build
+	NODE_ENV=test ${MAKE} build
 	NODE_ENV=test SELENIUM_BROWSER_BINARY_PATH="./node_modules/selenium-standalone/.selenium/chromedriver/2.24-x64-chromedriver" \
 		./node_modules/.bin/mocha \
         --require babel-polyfill \
