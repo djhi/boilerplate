@@ -1,7 +1,7 @@
 {
-  "name": "dpc-frontend",
+  "name": "frontend",
   "version": "0.0.1",
-  "description": "DPC Website frontend",
+  "description": "frontend",
   "main": "src/index.js",
   "scripts": {
     "dev": "node src",

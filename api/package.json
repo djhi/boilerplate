@@ -1,7 +1,7 @@
 {
-  "name": "dpc-api",
+  "name": "api",
   "version": "0.0.1",
-  "description": "DPC Website API",
+  "description": "API",
   "main": "src/index.js",
   "author": "Gildas Garcia",
   "license": "MIT",
