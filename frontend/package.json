@@ -1,0 +1,53 @@
+{
+  "name": "dpc-frontend",
+  "version": "0.0.1",
+  "description": "DPC Website frontend",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src",
+    "build": "./node_modules/.bin/next build src",
+    "start": "./node_modules/.bin/next start src"
+  },
+  "dependencies": {
+    "apollo-client": "0.8.1",
+    "babel-plugin-transform-assets": "0.2.0",
+    "babel-polyfill": "6.22.0",
+    "classnames": "2.2.5",
+    "expect": "1.20.2",
+    "fela": "4.2.0",
+    "fela-plugin-friendly-pseudo-class": "4.2.0",
+    "fela-plugin-named-media-query": "4.2.0",
+    "fela-preset-web": "4.2.0",
+    "fela-styles-connector": "1.0.4",
+    "fela-stylesheet": "4.1.2",
+    "graphql-tag": "1.2.3",
+    "isomorphic-fetch": "2.2.1",
+    "kilvin": "1.0.1",
+    "lodash.debounce": "4.0.8",
+    "next": "beta",
+    "react": "15.4.2",
+    "react-apollo": "0.9.0",
+    "react-dom": "15.4.2",
+    "react-fela": "4.2.0",
+    "react-redux": "5.0.2",
+    "react-router": "3.0.2",
+    "react-router-redux": "4.0.7",
+    "recompose": "0.21.2",
+    "redux": "3.6.0",
+    "redux-actions": "1.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.1.1",
+    "enzyme": "2.7.1",
+    "eslint": "3.14.1",
+    "eslint-config-airbnb": "14.0.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "3.0.2",
+    "eslint-plugin-mocha": "4.8.0",
+    "eslint-plugin-react": "6.9.0",
+    "fela-preset-dev": "4.2.0",
+    "mocha": "3.2.0",
+    "selenium-standalone": "6.0.1",
+    "selenium-webdriver": "3.0.1"
+  }
+}

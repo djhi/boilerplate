@@ -1,0 +1,13 @@
+build
+typings
+
+# Dependency directories
+node_modules
+
+# Optional npm cache directory
+.npm
+
+*.log
+config/development.js
+config/production.js
+config/staging.js

@@ -1,0 +1,24 @@
+server:
+    image: node:7.4.0
+    volumes:
+        - ./api:/app
+    links:
+        - mongo
+    working_dir: /app
+    ports:
+        - 3000:3000
+    command: npm run dev
+
+mongo:
+    image: mongo:3.0.14
+    ports:
+        - 27017:27017
+
+frontend:
+    image: node:7.4.0
+    volumes:
+        - ./frontend:/app
+    working_dir: /app
+    ports:
+        - 8080:8080
+    command: npm run dev
