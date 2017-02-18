@@ -4,11 +4,12 @@
   "description": "frontend",
   "main": "src/index.js",
   "scripts": {
-    "dev": "node src",
+    "dev": "node --require babel-register src",
     "build": "./node_modules/.bin/next build src",
     "start": "./node_modules/.bin/next start src"
   },
   "dependencies": {
+    "admin-on-rest": "0.8.1",
     "apollo-client": "0.8.1",
     "babel-plugin-transform-assets": "0.2.0",
     "babel-polyfill": "6.22.0",
@@ -20,10 +21,12 @@
     "fela-preset-web": "4.2.0",
     "fela-styles-connector": "1.0.4",
     "fela-stylesheet": "4.1.2",
+    "graphql": "0.9.1",
     "graphql-tag": "1.2.3",
     "isomorphic-fetch": "2.2.1",
     "kilvin": "1.0.1",
     "lodash.debounce": "4.0.8",
+    "lodash.omit": "4.5.0",
     "next": "beta",
     "react": "15.4.2",
     "react-apollo": "0.9.0",

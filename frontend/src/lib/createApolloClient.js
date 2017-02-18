@@ -2,13 +2,13 @@ import ApolloClient, { createNetworkInterface } from 'apollo-client';
 
 let apolloClient = null;
 
-function createClient(headers) {
+function createClient(graphqlEndPoint, headers) {
     return new ApolloClient({
         ssrMode: !process.browser,
         headers,
-        dataIdFromObject: result => result.id || null,
+        dataIdFromObject: result => result._id || null,
         networkInterface: createNetworkInterface({
-            uri: 'https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn',
+            uri: graphqlEndPoint,
             opts: {
                 credentials: 'same-origin',
             },
@@ -16,12 +16,12 @@ function createClient(headers) {
     });
 }
 
-export default (headers) => {
+export default (graphqlEndPoint, headers) => {
     if (!process.browser) {
-        return createClient(headers);
+        return createClient(graphqlEndPoint, headers);
     }
     if (!apolloClient) {
-        apolloClient = createClient(headers);
+        apolloClient = createClient(graphqlEndPoint, headers);
     }
     return apolloClient;
 };

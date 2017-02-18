@@ -19,11 +19,13 @@ export default (apolloClientMiddleware, initialState) => {
     let store;
 
     if (!process.browser || !reduxStore) {
-        const middleware = createMiddleware(apolloClientMiddleware.middleware())
-        store = createStore(getReducer(apolloClientMiddleware), initialState, middleware)
+        const middleware = createMiddleware(apolloClientMiddleware.middleware());
+        store = createStore(getReducer(apolloClientMiddleware), initialState, middleware);
+
         if (!process.browser) {
             return store;
         }
+
         reduxStore = store;
     }
     return reduxStore;

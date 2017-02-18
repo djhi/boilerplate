@@ -1,7 +1,7 @@
-const { createServer } = require('http');
-const { parse } = require('url');
-const { resolve } = require('path');
-const next = require('next');
+import { createServer } from 'http';
+import { parse } from 'url';
+import { resolve } from 'path';
+import next from 'next';
 
 const dev = process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test';
 const port = process.env.NODE_PORT || 8080;
@@ -15,7 +15,12 @@ const handle = app.getRequestHandler();
 const nextServer = app.prepare()
     .then(() => createServer((req, res) => {
         const parsedUrl = parse(req.url, true);
-        handle(req, res, parsedUrl);
+        const { pathname } = parsedUrl;
+        if (pathname.includes('/admin/')) {
+            app.render(req, res, '/admin');
+        } else {
+            handle(req, res, parsedUrl);
+        }
     }))
     .then((server) => {
         if (!module.parent || module.parent.filename.indexOf('api/index.js') !== -1) {

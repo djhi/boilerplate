@@ -8,7 +8,7 @@ export default Component => (
     class extends React.Component {
         static async getInitialProps(ctx) {
             const headers = ctx.req ? ctx.req.headers : {};
-            const client = createApolloClient(headers);
+            const client = createApolloClient('http://localhost:3000/graphql/', headers);
             const store = createStore(client, client.initialState);
 
             const props = {

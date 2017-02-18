@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-import { ThemeProvider } from 'react-fela';
 import { Box } from 'kilvin';
+import { ThemeProvider } from 'react-fela';
 
 import theme from './theme';
 import Layout from '../Layout';

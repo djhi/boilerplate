@@ -1,13 +1,14 @@
 server:
-    image: node:7.4.0
+    image: node:7.5.0
     volumes:
-        - ./api:/app
+        - ./api:/app:Z
     links:
         - mongo
     working_dir: /app
     ports:
         - 3000:3000
     command: npm run dev
+    user: "${UID}:${GID}"
 
 mongo:
     image: mongo:3.0.14
@@ -15,10 +16,11 @@ mongo:
         - 27017:27017
 
 frontend:
-    image: node:7.4.0
+    image: node:7.5.0
     volumes:
-        - ./frontend:/app
+        - ./frontend:/app:Z
     working_dir: /app
     ports:
         - 8080:8080
     command: npm run dev
+    user: "${UID}:${GID}"
