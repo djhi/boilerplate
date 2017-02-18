@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import classnames from 'classnames';
 import fela from 'fela-styles-connector';
 import NavbarLink from './NavbarLink';
 
@@ -10,8 +11,8 @@ const classes = {
 };
 
 const Navbar = ({ pathname, styles }) => (
-    <header className={styles.header}>
-        <NavbarLink path="/">The Application</NavbarLink>
+    <header className={classnames('navbar', styles.header)}>
+        <NavbarLink className="title" path="/">The Application</NavbarLink>
         {' - '}
         <NavbarLink
             isActive={pathname === '/articles'}
@@ -23,6 +24,7 @@ const Navbar = ({ pathname, styles }) => (
 );
 
 Navbar.propTypes = {
+    pathname: PropTypes.string.isRequired,
     styles: PropTypes.object.isRequired, // eslint-disable-line
 };
 

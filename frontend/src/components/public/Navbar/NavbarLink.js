@@ -12,12 +12,12 @@ const classes = {
     },
 };
 
-const NavbarLink = ({ children, isActive, path, styles }) => (
+const NavbarLink = ({ children, className, isActive, path, styles }) => (
     <Link
         href={path}
     >
         <a
-            className={classnames(styles.default, {
+            className={classnames(className, styles.default, {
                 [styles.active]: isActive,
             })}
         >
@@ -25,5 +25,17 @@ const NavbarLink = ({ children, isActive, path, styles }) => (
         </a>
     </Link>
 );
+
+NavbarLink.propTypes = {
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string,
+    isActive: PropTypes.bool.isRequired,
+    path: PropTypes.string.isRequired,
+    styles: PropTypes.object.isRequired, // eslint-disable-line
+};
+
+NavbarLink.defaultProps = {
+    className: null,
+};
 
 export default fela(classes)(NavbarLink);
