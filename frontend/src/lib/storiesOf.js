@@ -4,7 +4,7 @@ import { host } from 'storybook-host';
 import StyleLayout from '../app/StyleLayout';
 
 export default (componentName, module, title = componentName) =>
-    storiesOf('Navbar', module)
+    storiesOf(componentName, module)
         .addDecorator(story => (
             <StyleLayout>
                 {story()}
