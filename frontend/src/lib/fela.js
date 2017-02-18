@@ -8,7 +8,9 @@ let renderer;
 
 export function getMountNode() {
     if (typeof window !== 'undefined') {
-        return document.getElementById('fela-stylesheet');
+        const mountNode = document.getElementById('fela-stylesheet');
+        console.log({ mountNode });
+        return mountNode;
     }
 
     return undefined;

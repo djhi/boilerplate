@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node --require babel-register src",
     "build": "./node_modules/.bin/next build src",
-    "start": "./node_modules/.bin/next start src"
+    "start": "./node_modules/.bin/next start src",
+    "storybook": "start-storybook -p 9001 -s ./src -c .storybook"
   },
   "dependencies": {
     "admin-on-rest": "0.8.1",
@@ -40,7 +41,10 @@
     "redux-actions": "1.2.1"
   },
   "devDependencies": {
+    "@kadira/storybook": "2.35.3",
+    "@kadira/storybook-addon-knobs": "1.7.1",
     "babel-eslint": "7.1.1",
+    "deep-rename-keys": "0.2.0",
     "enzyme": "2.7.1",
     "eslint": "3.14.1",
     "eslint-config-airbnb": "14.0.0",
@@ -51,6 +55,7 @@
     "fela-preset-dev": "4.2.0",
     "mocha": "3.2.0",
     "selenium-standalone": "6.0.1",
-    "selenium-webdriver": "3.0.1"
+    "selenium-webdriver": "3.0.1",
+    "storybook-host": "1.0.14"
   }
 }

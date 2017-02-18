@@ -1,24 +1,24 @@
 import React, { PropTypes } from 'react';
-import classnames from 'classnames';
 import fela from 'fela-styles-connector';
-
-import Link from 'next/link';
+import NavbarLink from './NavbarLink';
 
 const classes = {
     header: {
         fontFamily: 'boycottregular',
-        fontSize: '3rem',
-    },
-    link: {
-        fontFamily: 'boycottregular',
+        fontSize: '2rem',
     },
 };
 
-const Navbar = ({ styles }) => (
+const Navbar = ({ pathname, styles }) => (
     <header className={styles.header}>
-        <Link href="/"><a className={classnames('title', styles.link)}>The Application</a></Link>
+        <NavbarLink path="/">The Application</NavbarLink>
         {' - '}
-        <Link href="/articles"><a className={styles.link}>Articles</a></Link>
+        <NavbarLink
+            isActive={pathname === '/articles'}
+            path="/articles"
+        >
+            Articles
+        </NavbarLink>
     </header>
 );
 
