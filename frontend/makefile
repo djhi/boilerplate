@@ -32,6 +32,9 @@ build:
 start:
 	./node_modules/.bin/next start src
 
+storybook:
+	npm run storybook
+
 test-unit: ## Run the frontend application unit tests
 	NODE_ENV=test ./node_modules/.bin/mocha \
 		--require babel-polyfill \
