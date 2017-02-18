@@ -32,6 +32,14 @@ make dev
 - API available on `http://localhost:3000`
 - Frontend available on `http://localhost:8080`
 
+### Storybooks
+
+Access the storybooks by running:
+
+```sh
+make storybook
+```
+
 ### Mongo database
 
 You can access the mongo shell by running

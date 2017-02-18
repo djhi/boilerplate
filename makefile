@@ -20,6 +20,9 @@ mongo-shell: ## Start the mongo shell
 mongo-shell-test: ## Start the mongo shell for the test database
 	docker exec -it dpc_mongo_1 mongo $(DATABASE_NAME)_test --shell
 
+storybook:
+	npm run storybook
+
 test: ## Execute all tests for API and frontend
 	$(MAKE) -C api test
 	$(MAKE) -C frontend test
