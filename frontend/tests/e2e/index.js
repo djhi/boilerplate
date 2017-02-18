@@ -6,6 +6,6 @@ describe('Home page', function homeTests() {
 
     it('should display the title', async () => {
         await driver.get('http://localhost:8100/');
-        await driver.findElement(By.css('.title'));
+        await driver.findElement(By.css('.navbar .title'));
     });
 });

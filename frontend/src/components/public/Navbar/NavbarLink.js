@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const classes = {
     default: {
-        fontFamily: 'boycottregular',
+        fontFamily: 'Open Sans',
     },
     active: {
         fontWeight: 'bold',
@@ -13,9 +13,7 @@ const classes = {
 };
 
 const NavbarLink = ({ children, className, isActive, path, styles }) => (
-    <Link
-        href={path}
-    >
+    <Link href={path}>
         <a
             className={classnames(className, styles.default, {
                 [styles.active]: isActive,

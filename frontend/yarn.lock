@@ -258,9 +258,9 @@ anymatch@^1.3.0:
     arrify "^1.0.0"
     micromatch "^2.1.5"
 
-apollo-client@0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-0.8.1.tgz#a7032e88f75170b35db2ac3c3acfd2b4adbf9a2a"
+apollo-client@0.8.7:
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-0.8.7.tgz#73f52d1dd6dfe0f07e8bfe05a8e47c4bcd3bf7a3"
   dependencies:
     graphql-anywhere "^2.1.0"
     graphql-tag "^1.1.1"
@@ -288,6 +288,12 @@ argparse@^1.0.7:
   resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.9.tgz#73d83bc263f86e97f8cc4f6bae1b0e90a7d22c86"
   dependencies:
     sprintf-js "~1.0.2"
+
+aria-query@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/aria-query/-/aria-query-0.3.0.tgz#cb8a9984e2862711c83c80ade5b8f5ca0de2b467"
+  dependencies:
+    ast-types-flow "0.0.7"
 
 arr-diff@^2.0.0:
   version "2.0.0"
@@ -380,6 +386,10 @@ asset-require-hook@^1.0.2:
     loader-utils "^0.2.12"
     lodash.assign "^4.0.0"
     mime "^1.3.4"
+
+ast-types-flow@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/ast-types-flow/-/ast-types-flow-0.0.7.tgz#f70b735c6bca1a5c9c22d982c3e39e7feba3bdad"
 
 ast-types@0.9.5:
   version "0.9.5"
@@ -1010,9 +1020,9 @@ babel-plugin-transform-strict-mode@^6.22.0:
     babel-runtime "^6.22.0"
     babel-types "^6.22.0"
 
-babel-polyfill@6.22.0:
-  version "6.22.0"
-  resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.22.0.tgz#1ac99ebdcc6ba4db1e2618c387b2084a82154a3b"
+babel-polyfill@6.23.0:
+  version "6.23.0"
+  resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.23.0.tgz#8364ca62df8eafb830499f699177466c3b03499d"
   dependencies:
     babel-runtime "^6.22.0"
     core-js "^2.4.0"
@@ -2081,6 +2091,10 @@ elliptic@^6.0.0:
     hash.js "^1.0.0"
     inherits "^2.0.1"
 
+emoji-regex@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-6.1.0.tgz#d14ef743a7dfa6eaf436882bd1920a4aed84dd94"
+
 emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
@@ -2258,15 +2272,15 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-airbnb-base@^11.0.1:
+eslint-config-airbnb-base@^11.1.0:
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-11.1.0.tgz#dc9b3ec70b8c74dcbe6d6257c9da3992c39ca2ca"
 
-eslint-config-airbnb@14.0.0:
-  version "14.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-14.0.0.tgz#bfd87a71102ba3ee19c3733357000b3d5e39790f"
+eslint-config-airbnb@14.1.0:
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-14.1.0.tgz#355d290040bbf8e00bf8b4b19f4b70cbe7c2317f"
   dependencies:
-    eslint-config-airbnb-base "^11.0.1"
+    eslint-config-airbnb-base "^11.1.0"
 
 eslint-import-resolver-node@^0.2.0:
   version "0.2.3"
@@ -2298,11 +2312,14 @@ eslint-plugin-import@2.2.0:
     minimatch "^3.0.3"
     pkg-up "^1.0.0"
 
-eslint-plugin-jsx-a11y@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-3.0.2.tgz#9f0eabcafde3d2a2600d96a66adb90d099e841fe"
+eslint-plugin-jsx-a11y@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-4.0.0.tgz#779bb0fe7b08da564a422624911de10061e048ee"
   dependencies:
+    aria-query "^0.3.0"
+    ast-types-flow "0.0.7"
     damerau-levenshtein "^1.0.0"
+    emoji-regex "^6.1.0"
     jsx-ast-utils "^1.0.0"
     object-assign "^4.0.1"
 
@@ -2312,17 +2329,19 @@ eslint-plugin-mocha@4.8.0:
   dependencies:
     ramda "^0.22.1"
 
-eslint-plugin-react@6.9.0:
-  version "6.9.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-6.9.0.tgz#54c2e9906b76f9d10142030bdc34e9d6840a0bb2"
+eslint-plugin-react@6.10.0:
+  version "6.10.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-6.10.0.tgz#9c48b48d101554b5355413e7c64238abde6ef1ef"
   dependencies:
     array.prototype.find "^2.0.1"
     doctrine "^1.2.2"
+    has "^1.0.1"
     jsx-ast-utils "^1.3.4"
+    object.assign "^4.0.4"
 
-eslint@3.14.1:
-  version "3.14.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.14.1.tgz#8a62175f2255109494747a1b25128d97b8eb3d97"
+eslint@3.15.0:
+  version "3.15.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.15.0.tgz#bdcc6a6c5ffe08160e7b93c066695362a91e30f2"
   dependencies:
     babel-code-frame "^6.16.0"
     chalk "^1.1.3"
@@ -2330,7 +2349,7 @@ eslint@3.14.1:
     debug "^2.1.1"
     doctrine "^1.2.2"
     escope "^3.6.0"
-    espree "^3.3.1"
+    espree "^3.4.0"
     estraverse "^4.2.0"
     esutils "^2.0.2"
     file-entry-cache "^2.0.0"
@@ -2359,7 +2378,7 @@ eslint@3.14.1:
     text-table "~0.2.0"
     user-home "^2.0.0"
 
-espree@^3.3.1:
+espree@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/espree/-/espree-3.4.0.tgz#41656fa5628e042878025ef467e78f125cb86e1d"
   dependencies:
@@ -2517,21 +2536,21 @@ fd-slicer@~1.0.1:
   dependencies:
     pend "~1.2.0"
 
-fela-plugin-friendly-pseudo-class@4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/fela-plugin-friendly-pseudo-class/-/fela-plugin-friendly-pseudo-class-4.2.0.tgz#1e6cbb6da4b683adf0da2bfb98ff43837dd34a1c"
+fela-plugin-friendly-pseudo-class@4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/fela-plugin-friendly-pseudo-class/-/fela-plugin-friendly-pseudo-class-4.2.5.tgz#ed631572eff91025394c692562a5be53ffa2d4d7"
 
-fela-plugin-named-media-query@4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/fela-plugin-named-media-query/-/fela-plugin-named-media-query-4.2.0.tgz#17fc5ee5849f75fcec298a90e25bfdcaa6ec1364"
+fela-plugin-named-media-query@4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/fela-plugin-named-media-query/-/fela-plugin-named-media-query-4.2.5.tgz#3189dd3c6314b6412368d9d7121ca2f93f313481"
 
-fela-preset-dev@4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/fela-preset-dev/-/fela-preset-dev-4.2.0.tgz#740331289cb16a226f2907c28743930e8f2ef88c"
+fela-preset-dev@4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/fela-preset-dev/-/fela-preset-dev-4.2.5.tgz#5f2d00a2c8df884274fa04bb92c412fb663d56ff"
 
-fela-preset-web@4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/fela-preset-web/-/fela-preset-web-4.2.0.tgz#197a1ce33a1ea5982b61b9c449ef6308d3f02935"
+fela-preset-web@4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/fela-preset-web/-/fela-preset-web-4.2.5.tgz#240c5528be695fde7f4d57b0495ade1240589ac7"
   dependencies:
     inline-style-prefixer "^2.0.5"
     unitless-css-property "1.0.2"
@@ -2544,9 +2563,9 @@ fela-stylesheet@4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/fela-stylesheet/-/fela-stylesheet-4.1.2.tgz#60efd913c9e5f64d38831564b6c9ed8ee1eea71f"
 
-fela@4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/fela/-/fela-4.2.0.tgz#6a1b4928773ae7341b5ca49c753e6d9a088f0b68"
+fela@4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/fela/-/fela-4.2.5.tgz#7efa30388600475f19565af04cb67a695a309c15"
   dependencies:
     hyphenate-style-name "1.0.1"
 
@@ -2853,9 +2872,9 @@ graphql-anywhere@^2.0.0, graphql-anywhere@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/graphql-anywhere/-/graphql-anywhere-2.2.0.tgz#652c3fa23a4a6cfeb98817512fb48100b97f3d5c"
 
-graphql-tag@1.2.3, graphql-tag@^1.1.1:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-1.2.3.tgz#74c62443fbf3e693647426d7359f7e3e6ce7dace"
+graphql-tag@1.2.4, graphql-tag@^1.1.1:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-1.2.4.tgz#90c59bea41378513fd7213dc92537fcd20e4570f"
 
 graphql@0.9.1:
   version "0.9.1"
@@ -4815,9 +4834,9 @@ react-addons-transition-group@^15.0.0:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
-react-apollo@0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-0.9.0.tgz#a95d05ccf2f92b16a21fd41795e2876c9ea28d6e"
+react-apollo@0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-0.11.1.tgz#b168dbff1f88b43763c205b446a17d662ad9d749"
   dependencies:
     graphql-anywhere "^2.0.0"
     hoist-non-react-statics "^1.2.0"
@@ -4884,9 +4903,9 @@ react-event-listener@^0.4.0:
     react-addons-shallow-compare "^15.4.2"
     warning "^3.0.0"
 
-react-fela@4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/react-fela/-/react-fela-4.2.0.tgz#b33a4d9e611f51f71df95c472093602b7c72a423"
+react-fela@4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/react-fela/-/react-fela-4.2.5.tgz#95945ba1e578a4c8532c4ae9f4685f4b2cedc800"
 
 react-fuzzy@^0.3.3:
   version "0.3.3"
@@ -4973,7 +4992,11 @@ react-redux@~4.4.5:
     lodash "^4.2.0"
     loose-envify "^1.1.0"
 
-react-router-redux@4.0.7, react-router-redux@~4.0.6:
+react-router-redux@4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.8.tgz#227403596b5151e182377dab835b5d45f0f8054e"
+
+react-router-redux@~4.0.6:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.7.tgz#9b1fde4e70106c50f47214e12bdd888cfb96e2a6"
 
@@ -5108,7 +5131,16 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
-recompose@0.21.2, recompose@^0.21.0, recompose@~0.21.2:
+recompose@0.22.0:
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.22.0.tgz#f099d18385882ca41d9eec891718dadddc3204ef"
+  dependencies:
+    change-emitter "^0.1.2"
+    fbjs "^0.8.1"
+    hoist-non-react-statics "^1.0.0"
+    symbol-observable "^1.0.4"
+
+recompose@^0.21.0, recompose@~0.21.2:
   version "0.21.2"
   resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.21.2.tgz#ff3fbdb2397b1c77c47d451be2a63b9295d44681"
   dependencies:
@@ -5367,9 +5399,9 @@ selenium-standalone@6.0.1:
     which "^1.2.12"
     yauzl "^2.5.0"
 
-selenium-webdriver@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/selenium-webdriver/-/selenium-webdriver-3.0.1.tgz#a2dea5da4a97f6672e89e7ca7276cefa365147a7"
+selenium-webdriver@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/selenium-webdriver/-/selenium-webdriver-3.1.0.tgz#d76182940cfb991edf4bc1c28318f4e7bc7730df"
   dependencies:
     adm-zip "^0.4.7"
     rimraf "^2.5.4"

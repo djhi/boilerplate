@@ -3,35 +3,33 @@ import devPreset from 'fela-preset-dev';
 import webPreset from 'fela-preset-web';
 import friendlyPseudoClass from 'fela-plugin-friendly-pseudo-class';
 import namedMediaQuery from 'fela-plugin-named-media-query';
-
-let renderer;
+import customFonts from '../customFonts';
+import mediaQueries from '../mediaQueries';
 
 export function getMountNode() {
     if (typeof window !== 'undefined') {
-        const mountNode = document.getElementById('fela-stylesheet');
-        console.log({ mountNode });
-        return mountNode;
+        return document.getElementById('fela-stylesheet');
     }
 
     return undefined;
 }
+
+let renderer;
 
 export function getRenderer() {
     if (!renderer) {
         renderer = createRenderer({
             plugins: [
                 friendlyPseudoClass(),
-                namedMediaQuery(),
+                namedMediaQuery(mediaQueries),
                 ...webPreset,
-            ].concat(process.env.NODE_ENV === 'development' ? devPreset : []),
+                ...(process.env.NODE_ENV === 'development' ? devPreset : []),
+            ],
         });
 
-        renderer.renderFont('boycottregular', [
-            '/static/boycott.eot',
-            '/static/boycott.svg',
-            '/static/boycott.ttf',
-            '/static/boycott.woff',
-        ]);
+        Object.keys(customFonts).forEach((fontFamily) => {
+            renderer.renderFont(fontFamily, customFonts[fontFamily]);
+        });
     }
 
     return renderer;

@@ -1,18 +1,18 @@
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 import fela from 'fela-styles-connector';
+import ApplicationLink from './ApplicationLink';
 import NavbarLink from './NavbarLink';
 
 const classes = {
     header: {
-        fontFamily: 'boycottregular',
         fontSize: '2rem',
     },
 };
 
 const Navbar = ({ pathname, styles }) => (
     <header className={classnames('navbar', styles.header)}>
-        <NavbarLink className="title" path="/">The Application</NavbarLink>
+        <ApplicationLink>The Application</ApplicationLink>
         {' - '}
         <NavbarLink
             isActive={pathname === '/articles'}
