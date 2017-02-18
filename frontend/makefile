@@ -13,35 +13,35 @@ ifeq ($(NODE_ENV), development)
 	-cp -n ./config/test-dist.js ./config/test.js
 endif
 
-install-npm-dependencies:
+install-npm-dependencies: ## Installs npm dependencies
 	echo "Installing Node dependencies for environment $(NODE_ENV)"
 	yarn $(if $(filter production staging,$(NODE_ENV)),--production,)
 ifeq ($(NODE_ENV), $(filter $(NODE_ENV),development test))
 	make install-selenium
 endif
 
-install-selenium:
+install-selenium: ## Installs selenium drivers
 	echo "Installing Selenium server"
 	./node_modules/.bin/selenium-standalone install --version=2.50.1 --drivers.chrome.version=2.24
 
-install: copy-conf install-npm-dependencies ## Install npm dependencies for the api, admin, and frontend apps
+install: copy-conf install-npm-dependencies ## Prepares development environment
 
-build:
+build: ## Builds the next.js app
 	./node_modules/.bin/next build src
 
-start:
+start: ## Starts the next.js app
 	./node_modules/.bin/next start src
 
-storybook:
+storybook: ## Starts the storybook app
 	npm run storybook
 
-test-unit: ## Run the frontend application unit tests
+test-unit: ## Runs the frontend application unit tests
 	NODE_ENV=test ./node_modules/.bin/mocha \
 		--require babel-polyfill \
 		--compilers="js:babel-core/register" \
 		"./src/**/*.spec.js"
 
-test-e2e: ## Run the frontend application e2e tests
+test-e2e: ## Runs the frontend application e2e tests
 	NODE_ENV=test ${MAKE} build
 	NODE_ENV=test SELENIUM_BROWSER_BINARY_PATH="./node_modules/selenium-standalone/.selenium/chromedriver/2.24-x64-chromedriver" \
 		./node_modules/.bin/mocha \
@@ -50,4 +50,4 @@ test-e2e: ## Run the frontend application e2e tests
 		--recursive \
 		./tests/e2e
 
-test: test-unit test-e2e
+test: test-unit test-e2e ## Runs all tests
