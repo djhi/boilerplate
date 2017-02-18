@@ -5,7 +5,7 @@ import { Delete } from 'admin-on-rest/lib/mui';
 
 import createRestClient from '../lib/admin-on-rest/client';
 
-import { PostCreate, PostEdit, PostList } from '../components/admin/posts';
+import { PostCreate, PostEdit, PostList } from '../app/admin/posts';
 
 class AdminPage extends Component {
     constructor() {

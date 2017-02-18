@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { host } from 'storybook-host';
-import StyleLayout from '../components/StyleLayout';
+import StyleLayout from '../app/StyleLayout';
 
 export default (componentName, module, title = componentName) =>
     storiesOf('Navbar', module)
