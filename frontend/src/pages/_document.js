@@ -20,7 +20,8 @@ export default class MyDocument extends Document {
         return (
             <html lang="fr-FR">
                 <Head>
-                    <title>My page</title>
+                    <title>My application</title>
+                    <script src="https://use.fontawesome.com/b1e976d965.js" />
                     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" />
                     <style id="fela-stylesheet">{this.props.css}</style>
                 </Head>

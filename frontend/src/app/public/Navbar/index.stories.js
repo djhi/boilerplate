@@ -1,6 +1,6 @@
 import React from 'react';
 import { text } from '@kadira/storybook-addon-knobs';
-import storiesOf from '../../../lib/storiesOf';
+import storiesOf from '../../../lib/publicStoriesOf';
 import Navbar from './Navbar';
 
 storiesOf('Navbar', module, 'The main public navbar')

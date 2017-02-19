@@ -14,20 +14,25 @@ import {
 export const PostList = props => (
     <List {...props}>
         <Datagrid>
-            <TextField source="id" />
-            <TextField source="reference" />
+            <TextField source="title" />
+            <TextField source="slug" />
+            <TextField source="author" />
             <EditButton />
         </Datagrid>
     </List>
 );
 
-const PostTitle = ({ record }) => <span>Post {record ? `"${record.reference}"` : ''}</span>;
+const PostTitle = ({ record }) => <span>Post {record ? `"${record.title}"` : ''}</span>;
 
 export const PostEdit = props => (
     <Edit title={<PostTitle />} {...props}>
         <SimpleForm>
             <DisabledInput source="id" />
-            <TextInput source="reference" />
+            <TextField source="title" />
+            <TextField source="slug" />
+            <TextField source="author" />
+            <TextField source="image_url" />
+            <TextField source="body" />
         </SimpleForm>
     </Edit>
 );
@@ -35,7 +40,11 @@ export const PostEdit = props => (
 export const PostCreate = props => (
     <Create {...props}>
         <SimpleForm>
-            <TextInput source="reference" />
+            <TextInput source="title" />
+            <TextInput source="slug" />
+            <TextInput source="author" />
+            <TextInput source="image_url" />
+            <TextInput source="body" />
         </SimpleForm>
     </Create>
 );

@@ -5,11 +5,11 @@ import Layout from '../app/public/PublicLayout';
 export default () => (
     <Layout>
         <Head>
-            <title>Dijon Parkour Crew</title>
+            <title>The Application</title>
             <meta charSet="utf-8" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
 
-        <h1>DPC</h1>
+        <h1>Welcome !</h1>
     </Layout>
 );
