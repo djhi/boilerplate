@@ -3,17 +3,17 @@ server:
     volumes:
         - ./api:/app:Z
     links:
-        - mongo
+        - postgres
     working_dir: /app
     ports:
         - 3000:3000
     command: npm run dev
     user: "${UID}:${GID}"
 
-mongo:
-    image: mongo:3.0.14
+postgres:
+    image: postgres:9.6.2
     ports:
-        - 27017:27017
+        - 5432:5432
 
 frontend:
     image: node:7.5.0

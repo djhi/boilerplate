@@ -3,8 +3,9 @@ import koaBodyParser from 'koa-bodyparser';
 import koaCors from 'kcors';
 import koaHelmet from 'koa-helmet';
 
-import mongo from './services/mongo';
+import db from './lib/db';
 import graphql from './graphql';
+import authentication from './authentication';
 
 const env = process.env.NODE_ENV || 'development';
 const port = process.env.NODE_PORT || 3000;
@@ -41,7 +42,9 @@ app.use(koaCors({
 }));
 
 app.use(koaBodyParser());
-app.use(mongo);
+app.use(db);
+app.use(authentication.routes());
+app.use(authentication.allowedMethods());
 app.use(graphql.routes());
 app.use(graphql.allowedMethods());
 

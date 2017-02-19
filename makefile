@@ -14,15 +14,29 @@ install: ## Installs npm dependencies for the api, and frontend apps
 dev: ## Runs the development environment
 	docker-compose up
 
-mongo-shell: ## Starts the mongo shell
-	docker exec -it dpc_mongo_1 mongo $(DATABASE_NAME) --shell
-
-mongo-shell-test: ## Starts the mongo shell for the test database
-	docker exec -it dpc_mongo_1 mongo $(DATABASE_NAME)_test --shell
-
 storybook: ## Starts the storybook app
 	$(MAKE) -C frontend storybook
 
 test: ## Executes all tests for API and frontend
 	$(MAKE) -C api test
 	$(MAKE) -C frontend test
+
+# Database
+# ==============================================================================
+create-database: ## Create the database
+	docker-compose exec server make create-database
+
+migrate: ## Migrate the database
+	docker-compose exec server make migrate
+
+revert-last-migration: ## Revert the last database migration
+	docker-compose exec server make revert-last-migration
+
+create-migration: ## Create a new database migration
+	docker-compose exec server make create-migration
+
+reset-migrations: ## Reset the database
+	docker-compose exec server make reset-migrations
+
+reset-database: ## Reset the database and run all migrations
+	docker-compose exec server make reset-database

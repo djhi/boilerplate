@@ -2,7 +2,11 @@ export default `
     # A post for the blog
     type Post {
         id: ID!
-        reference: String!
+        author: String!
+        body: String!
+        image_url: String!
+        title: String!
+        slug: String!
     }
 
     type PostPage {
