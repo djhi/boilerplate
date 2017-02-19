@@ -29,18 +29,25 @@ make install
 make dev
 ```
 
+**Important**: The first you run the application, the database won't be available yet. To create it, run:
+
+```sh
+make create-database
+make migrate-database
+```
+
 - API available on `http://localhost:3000`
 - Frontend available on `http://localhost:8080`
 
 ### Storybooks
 
-Access the storybooks by running:
+Access the storybooks on `http://localhost:9001` after running:
 
 ```sh
 make storybook
 ```
 
-### Mongo database
+### Postgres database
 
 You can access the mongo shell by running
 

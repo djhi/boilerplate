@@ -35,7 +35,7 @@ create-database: ## Create the database
 		--config=config/db-migrate-install.js \
 		db:create database
 
-migrate: ## Migrate the database
+migrate-database: ## Migrate the database
 	./node_modules/.bin/db-migrate \
 		--migrations-dir=./src/migrations \
 		--config=config/db-migrate.js \

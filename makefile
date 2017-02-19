@@ -23,11 +23,14 @@ test: ## Executes all tests for API and frontend
 
 # Database
 # ==============================================================================
+database-shell: ## Access the database shell
+	docker-compose exec database psql -U postgres database
+
 create-database: ## Create the database
 	docker-compose exec server make create-database
 
-migrate: ## Migrate the database
-	docker-compose exec server make migrate
+migrate-database: ## Migrate the database
+	docker-compose exec server make migrate-database
 
 revert-last-migration: ## Revert the last database migration
 	docker-compose exec server make revert-last-migration

@@ -1,7 +1,7 @@
 module.exports = {
     db: {
         driver: 'pg',
-        host: 'postgres',
+        host: 'database',
         port: 5432,
         user: 'postgres',
         password: '',

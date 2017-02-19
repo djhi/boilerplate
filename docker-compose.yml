@@ -3,14 +3,14 @@ server:
     volumes:
         - ./api:/app:Z
     links:
-        - postgres
+        - database
     working_dir: /app
     ports:
         - 3000:3000
     command: npm run dev
     user: "${UID}:${GID}"
 
-postgres:
+database:
     image: postgres:9.6.2
     ports:
         - 5432:5432
