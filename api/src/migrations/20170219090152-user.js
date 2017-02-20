@@ -1,6 +1,6 @@
 exports.up = (db, callback) => {
     db.createTable('user_account', {
-        id: { type: 'uuid', primaryKey: true, autoIncrement: true },
+        id: { type: 'uuid', primaryKey: true },
         email: { type: 'string' },
         password: { type: 'string' },
     }, callback);

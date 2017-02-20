@@ -1,6 +1,6 @@
 exports.up = (db, callback) => {
     db.createTable('post', {
-        id: { type: 'uuid', primaryKey: true, autoIncrement: true },
+        id: { type: 'uuid', primaryKey: true },
         author: { type: 'string' },
         body: { type: 'string' },
         image_url: { type: 'string' },

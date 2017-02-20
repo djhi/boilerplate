@@ -1,4 +1,5 @@
 import queries from './queries';
+import insertOne from '../lib/repository/insertOne';
 
 export const findBySlug = postClient =>
     async (slug) => {
@@ -11,6 +12,7 @@ function repository(client) {
 
     return {
         ...postClient,
+        insertOne: insertOne(postClient),
         findBySlug: findBySlug(postClient),
     };
 }

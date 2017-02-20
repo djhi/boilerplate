@@ -1,5 +1,6 @@
 import bcrypt from 'bcryptjs';
 import config from 'config';
+import baseInsertOne from '../lib/repository/insertOne';
 
 import queries from './queries';
 
@@ -10,7 +11,7 @@ export const hashUserPassword = user => ({
 
 export const insertOne = userClient =>
     async user =>
-        userClient.insertOne(hashUserPassword(user));
+        baseInsertOne(userClient)(hashUserPassword(user));
 
 export const findByEmail = userClient =>
     async (email) => {
