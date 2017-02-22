@@ -19,6 +19,8 @@ frontend:
     image: node:7.5.0
     volumes:
         - ./frontend:/app:Z
+    links:
+        - server # This enable next server to com
     working_dir: /app
     ports:
         - 8080:8080

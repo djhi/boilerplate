@@ -1,34 +1,32 @@
 import React, { Component } from 'react';
-
-import { Admin, Resource } from 'admin-on-rest';
-import { Delete } from 'admin-on-rest/lib/mui';
-
-import createRestClient from '../lib/admin-on-rest/client';
-
-import { PostCreate, PostEdit, PostList } from '../app/admin/posts';
+import createRestClient from '../lib/createAdminOnRestclient';
 
 class AdminPage extends Component {
     constructor() {
         super();
-        this.state = { restClient: null };
+        this.state = { AdminComponent: null };
     }
 
     componentDidMount() {
-        createRestClient().then(restClient => this.setState({ restClient }));
+        createRestClient().then((restClient) => {
+            // This is needed because otherwise next would try to load the quill WYSIWYG editor on server
+            // and fail as quill needs document.
+            const Admin = require('../app/admin').default; // eslint-disable-line
+
+            this.setState({
+                AdminComponent: (<Admin restClient={restClient} />),
+            });
+        });
     }
 
     render() {
-        const { restClient } = this.state;
+        const { AdminComponent } = this.state;
 
-        if (!restClient) {
+        if (!AdminComponent) {
             return <div>Loading</div>;
         }
 
-        return (
-            <Admin restClient={restClient} customSagas={[restClient.saga()]}>
-                <Resource name="Post" list={PostList} edit={PostEdit} create={PostCreate} remove={Delete} />
-            </Admin>
-        );
+        return AdminComponent;
     }
 }
 

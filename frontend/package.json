@@ -10,7 +10,8 @@
     "storybook": "start-storybook -p 9001 -s ./src -c .storybook"
   },
   "dependencies": {
-    "admin-on-rest": "0.8.1",
+    "admin-on-rest": "0.8.2",
+    "aor-simple-graphql-client": "0.0.3",
     "apollo-client": "0.8.7",
     "babel-plugin-transform-assets": "0.2.0",
     "babel-polyfill": "6.23.0",

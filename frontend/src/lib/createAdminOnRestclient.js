@@ -1,5 +1,5 @@
-import { buildApolloClient } from './graphql';
-import createApolloClient from '../createApolloClient';
+import { buildApolloClient } from 'aor-simple-graphql-client';
+import createApolloClient from './createApolloClient';
 
 export default async (graphqlEndPoint = 'http://localhost:3000/graphql/') => {
     const apolloClient = createApolloClient(graphqlEndPoint);
